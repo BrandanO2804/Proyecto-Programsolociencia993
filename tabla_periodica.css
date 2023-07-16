@@ -1,0 +1,341 @@
+body{
+    background: #0C3D59;
+    text-shadow: 0 0 0.4vw currentColor;
+    font-family: 'Courier New', Courier, monospace;
+}
+.banner{
+    color: #B2E1B9;
+    background-color: #0C3D59;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#texto-banner{
+    justify-self: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+}
+#logo{
+    height: 170px;
+    width: auto;
+    justify-self: left;
+}
+.wrap{
+    position: relative;
+    overflow: hidden;
+    padding: 2%; }
+    .wrapper > input {
+      -webkit-appearance: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+}
+.tabla_periodica{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(18, 1fr); 
+}
+.elemento{
+    position: relative;
+    font-size: 0.5vw;
+    padding-bottom: 100%;
+    cursor: pointer;
+    color: #B2E1B9;
+    transition: 500ms;
+}
+a{
+    text-decoration: none;
+    color: #B2E1B9;
+}
+a:hover{
+    background-color: #031FA2;
+    color: white;
+}
+.elemento .overlay {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0C3D59;
+    opacity: 0;
+    pointer-events: none;
+    transition: 500ms; }
+.elemento .cuadro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    box-sizing: border-box;
+    background: #0C3D59;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-property: transform, z-index, left, right, top, bottom;
+    transition-duration: 100ms, 0ms, 200ms, 200ms, 200ms, 200ms;
+    transition-delay: 0ms, 100ms, 0ms, 0ms, 0ms, 0ms; }
+.elemento .num-atomico {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px; }
+.elemento .etiqueta {
+    text-align: center;
+    transition: 200ms; }
+.elemento .simbolo {
+    font-size: 1.7vw; }
+.elemento .nombre {
+    font-size: 0.7vw; }
+.elemento .masa-atomica {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    text-align: center; }
+.elemento .peso-atomico {
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    opacity: 0;
+    transition: 200ms;
+    text-align: right; }
+
+.alcalino {
+    color: #ecbe59; }
+  
+.alcalinoterro {
+    color: #dee955; }
+  
+.lantanidos {
+    color: #ec77a3; }
+  
+.actinidos {
+    color: #c686cc; }
+  
+.metal-transicion {
+    color: #fd8572; }
+  
+.otro-metal {
+    color: #4cddf3; }
+  
+.metaloide {
+    color: #3aefb6; }
+ 
+.no-metal {
+    color: #52ee61; }
+  
+.gas-noble {
+    color: #8ce499; }
+  
+.halogeno {
+    color: #86aef8; }
+  
+.row1 {
+    grid-row: 1; }
+  
+.row2 {
+    grid-row: 2; }
+  
+.row3 {
+    grid-row: 3; }
+  
+.row4 {
+    grid-row: 4; }
+  
+.row5 {
+    grid-row: 5; }
+  
+.row6 {
+    grid-row: 6; }
+  
+.row7 {
+    grid-row: 7; }
+  
+.row8 {
+    grid-row: 8; }
+  
+.row9 {
+    grid-row: 9; }
+  
+.row10 {
+    grid-row: 10; }
+  
+.col1 {
+    grid-column: 1; }
+  
+.col2 {
+    grid-column: 2; }
+  
+.col3 {
+    grid-column: 3; }
+  
+.col4 {
+    grid-column: 4; }
+  
+.col5 {
+    grid-column: 5; }
+  
+.col6 {
+    grid-column: 6; }
+  
+.col7 {
+    grid-column: 7; }
+  
+.col8 {
+    grid-column: 8; }
+  
+.col9 {
+    grid-column: 9; }
+  
+.col10 {
+    grid-column: 10; }
+  
+.col11 {
+    grid-column: 11; }
+  
+.col12 {
+    grid-column: 12; }
+  
+.col13 {
+    grid-column: 13; }
+  
+.col14 {
+    grid-column: 14; }
+  
+.col15 {
+    grid-column: 15; }
+  
+.col16 {
+    grid-column: 16; }
+  
+.col17 {
+    grid-column: 17; }
+  
+.col18 {
+    grid-column: 18; }
+  
+.row1 input[type="radio"].activate:checked ~ .square {
+    top: 100%; 
+}
+  
+.row10 input[type="radio"].activate:checked ~ .square {
+    top: -100%; 
+}
+  
+.col1 input[type="radio"].activate:checked ~ .square {
+    left: 100%; 
+}
+  
+.col18 input[type="radio"].activate:checked ~ .square {
+    left: -100%; 
+}
+
+.elemento input[type="radio"] {
+    -webkit-appearance: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    outline: none; 
+}
+.elemento input[type="radio"].activate:hover ~ .square {
+    z-index: 2;
+    transform: scale(1.35);
+    transition-delay: 0ms;
+    outline: none;
+    pointer-events: none; 
+}
+.elemento input[type="radio"].activate:checked + input[type="radio"].deactivate {
+    z-index: 3;
+    pointer-events: all; 
+}
+.elemento input[type="radio"].activate:checked ~ .overlay {
+    opacity: 0.75; 
+}
+.elemento input[type="radio"].activate:checked ~ .square {
+    z-index: 3;
+    transform: scale(3);
+    transition-duration: 500ms, 0ms, 200ms, 200ms, 200ms, 200ms;
+    transition-delay: 0ms;
+    outline: none;
+    cursor: auto; 
+}
+.elemento input[type="radio"].activate:checked ~ .square .label {
+    transition-duration: 500ms;
+    transform: scale(0.75); 
+}
+.elemento input[type="radio"].activate:checked ~ .square .atomic-weight {
+    opacity: 1;
+    transition: 500ms; 
+}
+.elemento input[type="radio"].activate:checked ~ .square .model {
+    display: block;
+    animation: fade-in;
+    animation-duration: 1s; 
+}
+.elemento input[type="radio"].activate:checked ~ .square .orbital {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+.elemento input[type="radio"].deactivate {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none; 
+}
+.elemento input[type="radio"].deactivate:checked ~ .square {
+    z-index: 1;
+}
+
+#fli{
+    text-align: left;
+    background: #0C3D59;
+    
+}
+#foot{
+    color: #B2E1B9;
+    background-color: #0C3D59;
+}
+#foot:hover{
+    color: #66C256;
+}
+ul{
+    list-style: none;
+}
+footer{
+    display: flex;
+    color: #66C256;
+    background-color: #0C3D59;
+    align-items: flex-end;
+    justify-items: center;
+}
+#logout{
+    border-radius: 45px;
+    padding: 0 0;
+}
+.copyright{
+    align-self: flex-end;
+    color: #66C256;
+    padding-left: 200px;
+    padding-top: 95px;
+}

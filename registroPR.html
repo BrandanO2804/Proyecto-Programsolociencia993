@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./logo_b-removebg-preview.png">
+  <title>Registro Programacion</title>
+</head>
+<body id="form">
+  <header>
+    <div class="banner">
+      <img src="./MEDIA/Logo2.png" alt="image" id="logo">
+      
+      <h1 id="texto-banner">
+      SOLO CIENCIA
+      </h1>
+      <div> 
+          <a href="https://www.google.com" style="background-color: #0C3D59;"><img src="./MEDIA/busqueda.png" alt="iconobusqueda" style="width: 45px;"></a>
+          <a href="https://www.instagram.com/solocienciaoficial/" style="background-color: #0C3D59;"><img src="./MEDIA/ig.png" alt="instagram" style="width: 45px;"></a>
+          <a href="https://twitter.com/sciencia993" style="background-color: #0C3D59;"><img src="./MEDIA/tw.png" alt="twitter" style="width: 50px;"></a>
+      </div>
+  </div>
+    <h2>
+      Bienvenido al Sistema de Registro del curso de Programacion 
+    </h2>
+
+    </div>
+  <p>
+    <center>
+    Por favor, rellene el Formulario 
+    </center>
+  </p>
+  </header>
+
+<form action="procesoPR.jsp" method="get">
+    <fieldset> 
+      <legend>Informacion personal</legend>
+    <label for="nombrepr">Nombre:</label><br>
+    <input type="text" id="nombrepr"name="nombrepr">
+    <br>
+    <label for="cedulapr">Cedula:</label><br>
+    <input type="text" id="cedulapr"name="cedulapr">
+   <br>
+    </fieldset>
+    <fieldset>
+    <legend>Fechas Disponibles</legend>
+      
+    <input type="Radio" name="op" id="1"  value= "20 de julio" >20 de julio
+    <br/>
+    <input type="Radio" name= "op"id="2" value="24 de octubre">24 de octubre
+    <br/>
+    <input type="Radio" name="op" id="3"  value= "14 de noviembre">14 de noviembre
+    <br/>
+    </fieldset>
+    
+    <p><input type="submit" value="Enviar"></p>
+</form>
+ 
+</body>
+
+<footer style="border-top: solid gray;">
+  <br>
+  <ul>
+      <li id="fli"><a href="./Home.html" id="foot">Inicio</a></li>
+      <li id="fli"><a href="./registroCN.html" id="foot">Curso de Ciencias Naturales</a></li>
+      <li id="fli"><a href="./registroQB.html" id="foot">Curso de Química y Biología</a></li>
+      <li id="fli"><a href="./registroPR.html" id="foot">Curso de Programación</a></li>
+      <li id="fli"><a href="./tabla_periodica.html" id="foot">Referencias</a></li>
+      <li id="fli"><a href="./contactanos.html" id="foot">Contactanos</a></li>
+  </ul>
+  <br><br>
+  <p>© SoloCiencia. Courses are property of their respective owners. solociencia.com. Headquarters are in Panama City, Panama,</p>
+  <div style="padding-bottom: 25px;">
+      <a href="./Login.html" style="display: inline-block; border-radius: 20px; height: 25px;">LOGOUT</a>
+  </div>
+</footer>
+</html>
